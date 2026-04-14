@@ -1,23 +1,32 @@
-export const POPULAR_CHARACTERS: string[] = [
-    "Гарри Поттер", "Гермиона Грейнджер", "Рон Уизли", "Альбус Дамблдор", "Северус Снейп",
-    "Люк Скайуокер", "Дарт Вейдер", "Йода", "Хан Соло", "Лея Органа",
-    "Железный человек", "Капитан Америка", "Тор", "Халк", "Человек-паук",
-    "Бэтмен", "Супермен", "Чудо-женщина", "Джокер", "Харли Квинн",
-    "Фродо Бэггинс", "Гэндальф", "Арагорн", "Леголас", "Гимли",
-    "Шерлок Холмс", "Доктор Ватсон", "Джеймс Бонд", "Индиана Джонс", "Эллен Рипли",
-    "Нео", "Морфеус", "Тринити", "Джон Уик", "Доминик Торетто",
-    "Энакин Скайуокер", "Оби-Ван Кеноби", "Падме Амидала", "Кайло Рен", "Рей",
-    "Джон Сноу", "Дейенерис Таргариен", "Тирион Ланнистер", "Арья Старк", "Серсея Ланнистер",
-    "Уолтер Уайт", "Джесси Пинкман", "Соул Гудман", "Майк Эрмантраут", "Гас Фринг",
-    "Рик Граймс", "Дэрил Диксон", "Мишонн", "Ниган", "Кэрол Пелетье",
-    "Марио", "Луиджи", "Пикачу", "Соник", "Кратос",
-    "Эцио Аудиторе", "Алтаир", "Лара Крофт", "Нейтан Дрейк", "Джоэл",
-    "Кратос", "Атрей", "Элой", "Геральт из Ривии", "Цири",
-    "Солид Снейк", "Биг Босс", "Сэм Фишер", "Агент 47", "Макс Пэйн",
-    "Винни-Пух", "Пятачок", "Карлсон", "Малыш", "Чебурашка",
-    "Крокодил Гена", "Шапокляк", "Буратино", "Мальвина", "Карабас-Барабас",
-    "Кот Матроскин", "Пёс Шарик", "Дядя Фёдор", "Почтальон Печкин", "Волк и Заяц",
-    "Микки Маус", "Минни Маус", "Дональд Дак", "Гуфи", "Плуто",
-    "Багз Банни", "Даффи Дак", "Твити", "Сильвестр", "Том и Джерри",
-    "Скуби-Ду", "Шэгги", "Фред", "Дафна", "Велма"
-  ];
+export const POPULAR_CHARACTERS: string[]  = [
+  // === 20 Героев Dota 2 (самые иконные) ===
+  "Pudge", "Invoker", "Phantom Assassin", "Crystal Maiden", "Juggernaut",
+  "Axe", "Sniper", "Rubick", "Earthshaker", "Techies",
+  "Shadow Fiend", "Anti-Mage", "Queen of Pain", "Storm Spirit", "Mirana",
+  "Slark", "Phantom Lancer", "Tinker", "Lina", "Zeus",
+
+  // === 20 Аниме персонажей (иконы поп-культуры) ===
+  "Goku", "Naruto", "Luffy", "Levi Ackerman", "Eren Yeager",
+  "Sailor Moon", "Spike Spiegel", "Lelouch Lamperouge", "Light Yagami", "Edward Elric",
+  "Saitama", "Gojo Satoru", "Tanjiro Kamado", "Jotaro Kujo", "Guts",
+  "L", "Mikasa Ackerman", "Vegeta", "Kakashi Hatake", "Nezuko Kamado",
+
+  // === 20 Персонажей мультфильмов (Disney, Pixar, WB) ===
+  "Mickey Mouse", "Bugs Bunny", "SpongeBob SquarePants", "Shrek", "Homer Simpson",
+  "Rick Sanchez", "Eric Cartman", "Simba", "Elsa", "Woody",
+  "Scooby-Doo", "Tom and Jerry", "Pikachu", "Gollum", "Frodo Baggins",
+  "Peter Griffin", "Kenny McCormick", "Winnie the Pooh", "Lightning McQueen", "Gru",
+
+  // === 20 Исторических личностей (узнаваемые иконы) ===
+  "Albert Einstein", "Leonardo da Vinci", "Cleopatra", "Julius Caesar", "Napoleon Bonaparte",
+  "Jesus Christ", "Muhammad Ali", "William Shakespeare", "Abraham Lincoln", "Winston Churchill",
+  "Adolf Hitler", "Genghis Khan", "Marie Curie", "Isaac Newton", "George Washington",
+  "Martin Luther King Jr.", "Nelson Mandela", "Socrates", "Charles Darwin", "Joan of Arc",
+
+  // === 20 Героев Марвел (MCU + комиксы) ===
+  "Spider-Man", "Iron Man", "Captain America", "Thor", "Hulk",
+  "Black Widow", "Wolverine", "Deadpool", "Doctor Strange", "Black Panther",
+  "Thanos", "Loki", "Scarlet Witch", "Vision", "Star-Lord",
+  "Groot", "Rocket Raccoon", "Daredevil", "Magneto", "Venom"
+];
+
