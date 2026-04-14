@@ -91,7 +91,7 @@ export class GameService {
   }
   startGame(roomId: string, socketId: string): Room | null {
     const room = this.rooms.get(roomId);
-    if (!room || room.hostId !== socketId || room.gameStarted || room.players.size < 2) {
+    if (!room || room.hostId !== socketId || room.gameStarted || room.players.size < 3) {
       return null;
     }
 
@@ -104,9 +104,9 @@ export class GameService {
     room.imposterId = imposterId;
 
     // Готовим список доступных персонажей (исключаем уже выданные)
-    const availableCharacters = [...POPULAR_CHARACTERS];
-    this.shuffleArray(availableCharacters);
-
+    
+    const randomIndex = Math.floor(Math.random() * POPULAR_CHARACTERS.length);
+    const char = POPULAR_CHARACTERS[randomIndex]
     // Раздаём роли и персонажей
     for (const [id, player] of room.players) {
       if (id === imposterId) {
@@ -114,7 +114,7 @@ export class GameService {
         player.character = 'Импостер';
       } else {
         player.role = 'player';
-        player.character = availableCharacters.pop() || 'Безликий';
+        player.character = char;
       }
     }
 
