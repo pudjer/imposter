@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imposter Game</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🎭 Найди импостера</h1>
+    
+    <!-- Экран входа / создания комнаты -->
+    <div id="lobbyScreen" class="screen active">
+      <div class="card">
+        <label>Твоё имя:</label>
+        <input type="text" id="playerNameInput" placeholder="Введи имя" maxlength="20" />
+        
+        <div class="button-group">
+          <button id="createRoomBtn">➕ Создать комнату</button>
+          <div class="join-section">
+            <input type="text" id="roomIdInput" placeholder="Код комнаты" maxlength="10" />
+            <button id="joinRoomBtn">🚪 Присоединиться</button>
+          </div>
+        </div>
+        
+        <div id="errorMessage" class="error"></div>
+      </div>
+    </div>
+    
+    <!-- Экран комнаты (ожидание игроков) -->
+    <div id="roomScreen" class="screen">
+      <div class="room-header">
+        <div>
+          <span>Комната: <strong id="roomIdDisplay"></strong></span>
+        </div>
+        <button id="leaveRoomBtn" class="secondary">🚪 Выйти</button>
+      </div>
+      
+      <div class="players-panel">
+        <h2>Игроки (<span id="playerCount">0</span>)</h2>
+        <ul id="playersList" class="players-list"></ul>
+      </div>
+      
+      <div class="room-actions">
+        <button id="startGameBtn" class="primary" disabled>🎲 Начать игру (только хост)</button>
+      </div>
+      
+      <div id="gameStatusMessage" class="status"></div>
+    </div>
+    
+    <!-- Экран игры (показывается карточка) -->
+    <div id="gameScreen" class="screen">
+      <div class="game-card">
+        <h2>Твоя карточка</h2>
+        <div id="playerCard" class="card-reveal">
+          <div id="cardRole" class="role"></div>
+          <div id="cardCharacter" class="character"></div>
+        </div>
+        <p class="hint">Не показывай экран другим игрокам!</p>
+        <div>
+          <button id="newRoundBtn" class="primary" style="display:none; margin-bottom:10px;">🔄 Новый раунд</button>
+          <button id="backToLobbyBtn" class="secondary">🔄 Вернуться в лобби</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="client.js"></script>
+</body>
+</html>
